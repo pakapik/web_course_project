@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/Online Education</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">12345</property>
+
+        <property name="show_sql">true</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="entities.Course"/>
+        <mapping class="entities.Discount"/>
+        <mapping class="entities.Price"/>
+        <mapping class="entities.Lesson"/>
+        <mapping class="entities.LessonMeeting"/>
+        <mapping class="entities.UserBase"/>
+        <mapping class="entities.Student"/>
+        <mapping class="entities.Teacher"/>
+        <mapping class="entities.TeacherCourse"/>
+
+    </session-factory>
+</hibernate-configuration>
